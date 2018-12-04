@@ -1,6 +1,7 @@
 package M3105.kebabvisitor.ingredients;
 
 import M3105.kebabvisitor.Kebab;
+import visitor.VisiteurDeRegime;
 
 public class Fromage extends Ingredient {
 
@@ -18,4 +19,10 @@ public class Fromage extends Ingredient {
 		return super.isPescetarien();
 	}
 
-}
+	@Override
+	public void accept(VisiteurDeRegime visiteur) {
+		visiteur.visit(this);
+		
+	}
+
+} 

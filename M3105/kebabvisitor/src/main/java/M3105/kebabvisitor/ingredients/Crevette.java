@@ -1,6 +1,7 @@
 package M3105.kebabvisitor.ingredients;
 
 import M3105.kebabvisitor.Kebab;
+import visitor.VisiteurDeRegime;
 
 public class Crevette extends Ingredient {
 
@@ -26,6 +27,12 @@ public class Crevette extends Ingredient {
         ce ne serait mÃªme pas la peine d'Ã©crire (de redÃ©finir) dans cette classe isPescetarien
         car son comportement n'apporte rien de nouveau ... ;-) */
     }
+
+	@Override
+	public void accept(VisiteurDeRegime visiteur) {
+		visiteur.visit(this);
+		
+	}
     
- 
+  
 }

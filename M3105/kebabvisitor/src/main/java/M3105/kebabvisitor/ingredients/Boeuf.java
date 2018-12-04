@@ -3,6 +3,7 @@ package M3105.kebabvisitor.ingredients;
 import java.util.List;
 
 import M3105.kebabvisitor.Kebab;
+import visitor.VisiteurDeRegime;
 
 public class Boeuf extends Ingredient {
 	
@@ -20,6 +21,12 @@ public class Boeuf extends Ingredient {
 	    public boolean isPescetarien() {
 	        return false;
 	    }
+
+		@Override
+		public void accept(VisiteurDeRegime visiteur) {
+			visiteur.visit(this);
+			
+		}
 
 	
 }
