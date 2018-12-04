@@ -1,9 +1,8 @@
-package M3105.kebabvisitor;
+package M3105.kebabvisitor.ingredients;
 
 import java.util.List;
 
-
-import M3105.kebabvisitor.ingredients.Ingredient;
+import M3105.kebabvisitor.Kebab;
 
 public class Boeuf extends Ingredient {
 	
