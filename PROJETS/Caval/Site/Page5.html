@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<script src="./jquery-3.3.1.min.js"></script>
+		<script src="./script.js"></script>
+		<title>Caval</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div>
+			<div class="btn-navigation">
+				<div class="barre"></div>
+				<div class="barre"></div>
+				<div class="barre"></div>
+			</div>
+			<div class="logo">
+				<img src="Images/shopping-cart-black-shape.png" alt="logo">
+			</div>
+			<div class="navigation">
+				<ul>
+					<li>
+						<a href="./Index.html">Accueil</a>
+					</li>
+					<li>
+						<a href="./Page2.html">Pourquoi nous choisir</a>
+					</li>
+					<li>
+						<a href="./Page3.html">Notre Collection</a>
+					</li>
+					<li>
+						<a href="./Page4.html">Infos utile</a>
+					</li>
+					<li>
+						<a href="./Page5.html">Nous contacter</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="header">
+			<a href="./Index.html"><img class="mobile" alt="MDN" src="Images/logo.jpg"></a>
+			<a href="Images/Index.html"><img class="ordi" alt="MDN" src="Images/caval1.jpg"><img class="ordi" alt="MDN" src="Images/caval2.jpg"><img class="ordi" alt="MDN" src="Images/caval3.jpg"></a>
+		</div>
+		<div id="container">
+			<div id="bd_gauche" >
+				<img src="Images/bordure.png" alt="BG">
+			</div>
+			<div id="Page5">
+				<div id="bloc_no" >
+					<ul id="navigation_ordi">
+						<li>
+							<a href="./Index.html">Accueil</a>
+						</li>
+						<li>
+							<a href="./Page2.html">Pourquoi nous choisir</a>
+						</li>
+						<li >
+							<a href="./Page3.html">Notre Collection</a>
+						</li>
+						<li>
+							<a href="./Page4.html">Infos utile</a>
+						</li>
+						<li>
+							<a href="./Page5.html">Nous contacter</a>
+						</li>
+					</ul>
+				</div>
+				<form class="Page5" id="form" method="post" >
+					<fieldset>		
+						<legend>Vos Coordonées</legend>
+
+					  	<div ><label>Nom </label> : <input type="text" name="nom" /></div>
+					  	<div><label>Prénom</label> : <input type="text" name="prenom" /></div>
+					  	<div><label>Email</label> : <input type="email" name="mail" /></div>
+					  	<div><label>Téléphone</label> : <input type="tel" name="tel" /></div>
+					  	<div>
+					   		<p>
+						       <label for="pays">Pays :</label><br />
+						       <select name="pays" id="pays">
+						           <optgroup label="Europe">
+						               <option value="france">France</option>
+						               <option value="espagne">Espagne</option>
+						               <option value="italie">Italie</option>
+						               <option value="royaume-uni">Royaume-Uni</option>
+						           </optgroup>
+						           <optgroup label="Amérique">
+						               <option value="canada">Canada</option>
+						               <option value="etats-unis">Etats-Unis</option>
+						           </optgroup>
+						           <optgroup label="Asie">
+						               <option value="chine">Chine</option>
+						               <option value="japon">Japon</option>
+						           </optgroup>
+						       </select>
+					   		</p>
+						</div>
+	   				</fieldset>
+			   		<fieldset>
+			   			<legend>Votre question</legend>
+			   			<div>
+				   			<p>
+				       			<label for="choix">Quel est le sujet de votre question ?</label><br />
+				       			<select name="choix" id="choix">
+						           <option value="produit">Un produit</option>
+						           <option value="livraison">La livraison</option>
+						           <option value="retour">Les retours</option>
+				       			</select>
+			   				</p>
+			   			</div>
+			  			<div>
+				  			<p>
+				       			<label for="choix">Rédigez votre question </label><br /> 
+				      			 <textarea name="ameliorer" id="ameliorer" rows="10" cols="50"></textarea>       
+				   			</p>
+			   			</div>
+			   			<input type="submit" value="Envoyer"/>
+			   		</fieldset>
+				</form>
+			</div><div id="bd_droiterm" class="bd_droite" >
+				<img src="Images/bordure.png" alt="BD">
+			</div>	
+		</div><div id="footer">
+		<div id="sb_footer">
+			<a href="https://www.instagram.com/caval_chaussures/"><img id="insta" alt="MDN" src="Images/insta.png"></a>
+			<a href="https://www.facebook.com/CavalChaussures/"><img id="fb" alt="MDN" src="Images/facebook.png"></a>
+			<a href="https://fr.ulule.com/en-caval/"><img id="ulule" alt="MDN" src="Images/ulule.png"></a>
+		</div>	
+	</div>
+	</body>
+</html>

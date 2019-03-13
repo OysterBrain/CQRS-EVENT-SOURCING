@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* fin css reset */
+
+body {
+	margin: 20px 100px;
+}
+
+header {
+	padding: 20px 0px;
+	margin-bottom: 50px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+}
+
+form {
+	padding: 20px;
+	border: 1px solid black;
+}
+
+input {
+	width: 200px;
+	margin-bottom : 20px;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+table {
+	margin: 0px auto;
+}
+
+th, td {
+	padding: 10px;
+}
+
+label {
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+select {
+	margin-bottom: 30px;
+}
+
+footer {
+	margin-top: 50px;
+}
+
+.buttonCenter {
+	display: block;
+	margin: 0px auto 40px auto;
+	width: 200px;
+	height: 50px;
+}
+
+.buttonAlignment {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 100px;
+	margin-bottom: 30px;
+}
+
+.columnForm {
+	width: 30%;
+}
+
+.columnCenter {
+	display: flex;
+	justify-content: center;
+}
+
+.submitInput {
+	display: block;
+	margin: 40px auto 0px auto;
+	height: 40px;
+}
+
+.formResearch {
+	border: none;
+	display: block;
+	width: 30%;
+	margin: 0px auto;
+}
+
+.buttonFooter {
+	display: inline-block;
+}
+
+.buttonBack {
+	float: right;
+}
+	

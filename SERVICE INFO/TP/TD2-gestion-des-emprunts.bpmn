@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w4.eu/20171027/definitions-_WVgTwOixEeiV94kHgjpOMg" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmn20="http://www.bizagi.com/bpmn20" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="definitions-_WVgTwOixEeiV94kHgjpOMg" exporter="ITESOFT | W4 Web Modeler" exporterVersion="1.0" expressionLanguage="http://www.w4.eu/spec/EL/20110701" name="model" targetNamespace="http://www.w4.eu/20171027/definitions-_WVgTwOixEeiV94kHgjpOMg" typeLanguage="http://www.w4.eu/spec/BPMN/20110701/DT">
+  <bpmn2:process id="_PtmQ8fVkEeeL5uCiN2F57w" name="Processus" processType="None">
+    <bpmn2:startEvent id="Id_3dd8a080-a200-4e18-841f-aabca3f56de4" name="Début Emprunt d'un livre" isInterrupting="true">
+      <bpmn2:documentation id="_aNKESPVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&amp;nbsp;&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#E6FF97"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#62A716"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>Id_c1be2118-8bb0-4ae9-b880-14987e901bc6</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:task id="Id_3cc723f8-e957-4b44-a629-12acff0dc226" name="Demande d'emprunt d'un livre" completionQuantity="1" isForCompensation="false" startQuantity="1">
+      <bpmn2:documentation id="_aNKERvVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#ECEFFF"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#03689A"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_c1be2118-8bb0-4ae9-b880-14987e901bc6</bpmn2:incoming>
+      <bpmn2:outgoing>Id_a9fa84cb-db25-442d-b604-0e6da13a8505</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:subProcess id="Id_81857804-d9f0-463c-8f1f-ac25c59ef7a3" name="Création  d'un adhérent" completionQuantity="1" isForCompensation="false" startQuantity="1" triggeredByEvent="false">
+      <bpmn2:documentation id="_aNKEXvVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:incoming>Id_3a741eb5-e38e-4c56-9f37-00a075899dfd</bpmn2:incoming>
+      <bpmn2:outgoing>Id_4f4bb117-88d8-42ca-8d1f-02dbb26b62dd</bpmn2:outgoing>
+    </bpmn2:subProcess>
+    <bpmn2:exclusiveGateway id="Id_a8322ffd-89bd-41e9-9469-2064c934902f" name="" gatewayDirection="Converging">
+      <bpmn2:documentation id="_aNKETvVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#FFFFCC"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#A6A61D"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_4f4bb117-88d8-42ca-8d1f-02dbb26b62dd</bpmn2:incoming>
+      <bpmn2:incoming>Id_4d07575c-8e3d-47cc-9cf4-c9b74639cd62</bpmn2:incoming>
+      <bpmn2:outgoing>Id_749bc35e-ea25-45ac-a3f9-189abd6043d7</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Id_a53b1054-d508-4edb-abdf-9127369b7dc8" name="Personne adhérent ? " gatewayDirection="Diverging" default="Id_3a741eb5-e38e-4c56-9f37-00a075899dfd">
+      <bpmn2:documentation id="_aNKET_VdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#FFFFCC"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#A6A61D"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_a9fa84cb-db25-442d-b604-0e6da13a8505</bpmn2:incoming>
+      <bpmn2:outgoing>Id_3a741eb5-e38e-4c56-9f37-00a075899dfd</bpmn2:outgoing>
+      <bpmn2:outgoing>Id_4d07575c-8e3d-47cc-9cf4-c9b74639cd62</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Id_61461bf7-837f-4549-ba3e-1ea382d13d3e" name="Possibilité d'emprunt?" gatewayDirection="Diverging" default="Id_c988eb2b-de58-4bbc-8ca3-9403a42b8e2a">
+      <bpmn2:documentation id="_aNKESfVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#FFFFCC"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#A6A61D"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_749e3350-d04f-463c-87a8-a5d71b4eb617</bpmn2:incoming>
+      <bpmn2:outgoing>Id_27ab4a27-c596-4648-9a81-0f8563e404aa</bpmn2:outgoing>
+      <bpmn2:outgoing>Id_c988eb2b-de58-4bbc-8ca3-9403a42b8e2a</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="Id_60d6d681-8792-47c8-884b-224fbb513623" name="Emprunter livre" completionQuantity="1" isForCompensation="false" startQuantity="1">
+      <bpmn2:documentation id="_aNKERfVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#ECEFFF"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#03689A"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_27ab4a27-c596-4648-9a81-0f8563e404aa</bpmn2:incoming>
+      <bpmn2:outgoing>Id_c4380336-0061-4181-8571-4e2ac3da8414</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:eventBasedGateway id="Id_d68ae09c-0033-484b-8774-866517e0d599" name="" gatewayDirection="Diverging" eventGatewayType="Exclusive" instantiate="false">
+      <bpmn2:documentation id="_aNKEYvVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:incoming>Id_c4380336-0061-4181-8571-4e2ac3da8414</bpmn2:incoming>
+      <bpmn2:outgoing>_aNKEYPVdEeeL5uCiN2F57w</bpmn2:outgoing>
+      <bpmn2:outgoing>Id_c5328381-b461-44e3-abcd-8f29c9864785</bpmn2:outgoing>
+    </bpmn2:eventBasedGateway>
+    <bpmn2:endEvent id="Id_d1187594-b14c-472d-a7a6-a00fdc2448a7" name="Fin sur non emprunt du livre">
+      <bpmn2:documentation id="_aNKESvVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#EEAAAA"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#990000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_c988eb2b-de58-4bbc-8ca3-9403a42b8e2a</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:intermediateThrowEvent id="Id_05854bb4-bec0-4f7f-879c-fec67985b8e9" name="Restitution du livre dans les délais ">
+      <bpmn2:documentation id="_aNKETPVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#FEFAEF"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#969149"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_c5328381-b461-44e3-abcd-8f29c9864785</bpmn2:incoming>
+      <bpmn2:outgoing>Id_31d61cef-78a4-4406-b773-fab99c10631a</bpmn2:outgoing>
+    </bpmn2:intermediateThrowEvent>
+    <bpmn2:intermediateCatchEvent id="_aNKEX_VdEeeL5uCiN2F57w" name="Rendu du livre après 1 mois">
+      <bpmn2:incoming>_aNKEYPVdEeeL5uCiN2F57w</bpmn2:incoming>
+      <bpmn2:outgoing>_aNKEQvVdEeeL5uCiN2F57w</bpmn2:outgoing>
+      <bpmn2:timerEventDefinition id="_aNKEYfVdEeeL5uCiN2F57w"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:task id="Id_a96159d1-19fb-46f3-9d4f-f86e26b4d7b9" name="Récupérer livre" completionQuantity="1" isForCompensation="false" startQuantity="1">
+      <bpmn2:documentation id="_aNKETfVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#ECEFFF"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#03689A"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_31d61cef-78a4-4406-b773-fab99c10631a</bpmn2:incoming>
+      <bpmn2:outgoing>Id_fa6bf371-6253-4e58-949e-c9262df9b2fd</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Id_7ea79443-c627-416a-88c5-dd2101bbb59f" name="Declencher processus de litige" completionQuantity="1" isForCompensation="false" startQuantity="1">
+      <bpmn2:documentation id="_aNKEQ_VdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#ECEFFF"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#03689A"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_aNKEQvVdEeeL5uCiN2F57w</bpmn2:incoming>
+      <bpmn2:outgoing>Id_7bee3488-031a-4caa-be1c-85b394d1b526</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="Id_b80c9c43-6d27-43b9-b11e-b561507725ac" name="Fin sur litige">
+      <bpmn2:documentation id="_aNKERPVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#EEAAAA"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#990000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_7bee3488-031a-4caa-be1c-85b394d1b526</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="Id_1009727a-8d6f-4969-8a8e-5da26d5d4f35" name="Fin sur récupération du livre">
+      <bpmn2:documentation id="_aNKES_VdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="#EEAAAA"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#990000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Id_fa6bf371-6253-4e58-949e-c9262df9b2fd</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="Id_c1be2118-8bb0-4ae9-b880-14987e901bc6" sourceRef="Id_3dd8a080-a200-4e18-841f-aabca3f56de4" targetRef="Id_3cc723f8-e957-4b44-a629-12acff0dc226">
+      <bpmn2:documentation id="_aNKEUfVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_a9fa84cb-db25-442d-b604-0e6da13a8505" sourceRef="Id_3cc723f8-e957-4b44-a629-12acff0dc226" targetRef="Id_a53b1054-d508-4edb-abdf-9127369b7dc8">
+      <bpmn2:documentation id="_aNKEWfVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_3a741eb5-e38e-4c56-9f37-00a075899dfd" name="NON" sourceRef="Id_a53b1054-d508-4edb-abdf-9127369b7dc8" targetRef="Id_81857804-d9f0-463c-8f1f-ac25c59ef7a3">
+      <bpmn2:documentation id="_aNKEWPVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_4f4bb117-88d8-42ca-8d1f-02dbb26b62dd" sourceRef="Id_81857804-d9f0-463c-8f1f-ac25c59ef7a3" targetRef="Id_a8322ffd-89bd-41e9-9469-2064c934902f">
+      <bpmn2:documentation id="_aNKEVvVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_749bc35e-ea25-45ac-a3f9-189abd6043d7" sourceRef="Id_a8322ffd-89bd-41e9-9469-2064c934902f" targetRef="Id_f5493f89-81de-45c6-ac22-92b5a8d490b7">
+      <bpmn2:documentation id="_aNKEUvVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Expression_24e05ba4-f373-4e13-9c48-fd5ec4667a00"/>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_4d07575c-8e3d-47cc-9cf4-c9b74639cd62" name="OUI" sourceRef="Id_a53b1054-d508-4edb-abdf-9127369b7dc8" targetRef="Id_a8322ffd-89bd-41e9-9469-2064c934902f">
+      <bpmn2:documentation id="_aNKEVfVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Expression_2bf24685-3b07-4de3-b194-df4866b48ae8"/>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_749e3350-d04f-463c-87a8-a5d71b4eb617" sourceRef="Id_f5493f89-81de-45c6-ac22-92b5a8d490b7" targetRef="Id_61461bf7-837f-4549-ba3e-1ea382d13d3e">
+      <bpmn2:documentation id="_aNKEUPVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_c988eb2b-de58-4bbc-8ca3-9403a42b8e2a" name="NON" sourceRef="Id_61461bf7-837f-4549-ba3e-1ea382d13d3e" targetRef="Id_d1187594-b14c-472d-a7a6-a00fdc2448a7">
+      <bpmn2:documentation id="_aNKEU_VdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_27ab4a27-c596-4648-9a81-0f8563e404aa" name="OUI" sourceRef="Id_61461bf7-837f-4549-ba3e-1ea382d13d3e" targetRef="Id_60d6d681-8792-47c8-884b-224fbb513623">
+      <bpmn2:documentation id="_aNKEWvVdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&amp;nbsp;&lt;/p></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_c4380336-0061-4181-8571-4e2ac3da8414" sourceRef="Id_60d6d681-8792-47c8-884b-224fbb513623" targetRef="Id_d68ae09c-0033-484b-8774-866517e0d599">
+      <bpmn2:documentation id="_aNKEV_VdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_aNKEYPVdEeeL5uCiN2F57w" sourceRef="Id_d68ae09c-0033-484b-8774-866517e0d599" targetRef="_aNKEX_VdEeeL5uCiN2F57w"/>
+    <bpmn2:sequenceFlow id="Id_c5328381-b461-44e3-abcd-8f29c9864785" sourceRef="Id_d68ae09c-0033-484b-8774-866517e0d599" targetRef="Id_05854bb4-bec0-4f7f-879c-fec67985b8e9">
+      <bpmn2:documentation id="_aNKEW_VdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Expression_a04f0d4d-3419-4782-96f7-f8a6c1e0abba"/>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_31d61cef-78a4-4406-b773-fab99c10631a" sourceRef="Id_05854bb4-bec0-4f7f-879c-fec67985b8e9" targetRef="Id_a96159d1-19fb-46f3-9d4f-f86e26b4d7b9">
+      <bpmn2:documentation id="_aNKEXPVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_aNKEQvVdEeeL5uCiN2F57w" sourceRef="_aNKEX_VdEeeL5uCiN2F57w" targetRef="Id_7ea79443-c627-416a-88c5-dd2101bbb59f"/>
+    <bpmn2:sequenceFlow id="Id_fa6bf371-6253-4e58-949e-c9262df9b2fd" sourceRef="Id_a96159d1-19fb-46f3-9d4f-f86e26b4d7b9" targetRef="Id_1009727a-8d6f-4969-8a8e-5da26d5d4f35">
+      <bpmn2:documentation id="_aNKEXfVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Id_7bee3488-031a-4caa-be1c-85b394d1b526" sourceRef="Id_7ea79443-c627-416a-88c5-dd2101bbb59f" targetRef="Id_b80c9c43-6d27-43b9-b11e-b561507725ac">
+      <bpmn2:documentation id="_aNKEVPVdEeeL5uCiN2F57w" textFormat="text/plain"></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <bpmn20:BizagiExtensions>
+          <bpmn20:BizagiProperties>
+            <bpmn20:BizagiProperty name="bgColor" value="White"/>
+            <bpmn20:BizagiProperty name="borderColor" value="#000000"/>
+          </bpmn20:BizagiProperties>
+        </bpmn20:BizagiExtensions>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:subProcess id="Id_f5493f89-81de-45c6-ac22-92b5a8d490b7" name="Validité de l'emprunt" completionQuantity="1" isForCompensation="false" startQuantity="1" triggeredByEvent="false">
+      <bpmn2:documentation id="_aNKER_VdEeeL5uCiN2F57w" textFormat="text/plain">&lt;p>&lt;span style=&quot;font-family:Tahoma;font-size:8pt;&quot;> &lt;/span>&lt;/p></bpmn2:documentation>
+      <bpmn2:incoming>Id_749bc35e-ea25-45ac-a3f9-189abd6043d7</bpmn2:incoming>
+      <bpmn2:outgoing>Id_749e3350-d04f-463c-87a8-a5d71b4eb617</bpmn2:outgoing>
+    </bpmn2:subProcess>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_WWRv0OixEeiV94kHgjpOMg" name="Processus-diagramme">
+    <bpmndi:BPMNPlane id="_WWRv0eixEeiV94kHgjpOMg" bpmnElement="_PtmQ8fVkEeeL5uCiN2F57w">
+      <bpmndi:BPMNShape id="_WWRv0uixEeiV94kHgjpOMg" bpmnElement="Id_f5493f89-81de-45c6-ac22-92b5a8d490b7">
+        <dc:Bounds height="83.0" width="130.0" x="608.0" y="130.0"/>
+        <bpmndi:BPMNLabel id="_WWRv0-ixEeiV94kHgjpOMg"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv1OixEeiV94kHgjpOMg" bpmnElement="Id_a8322ffd-89bd-41e9-9469-2064c934902f">
+        <dc:Bounds height="40.0" width="40.0" x="508.0" y="151.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv1eixEeiV94kHgjpOMg" bpmnElement="Id_3cc723f8-e957-4b44-a629-12acff0dc226">
+        <dc:Bounds height="83.0" width="130.0" x="168.0" y="129.0"/>
+        <bpmndi:BPMNLabel id="_WWRv1uixEeiV94kHgjpOMg"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv1-ixEeiV94kHgjpOMg" bpmnElement="Id_d68ae09c-0033-484b-8774-866517e0d599">
+        <dc:Bounds height="40.0" width="40.0" x="968.0" y="290.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv2OixEeiV94kHgjpOMg" bpmnElement="Id_61461bf7-837f-4549-ba3e-1ea382d13d3e">
+        <dc:Bounds height="40.0" width="40.0" x="808.0" y="151.0"/>
+        <bpmndi:BPMNLabel id="_WWRv2eixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="794.0" y="123.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv2uixEeiV94kHgjpOMg" bpmnElement="Id_b80c9c43-6d27-43b9-b11e-b561507725ac">
+        <dc:Bounds height="35.0" width="35.0" x="1378.0" y="373.0"/>
+        <bpmndi:BPMNLabel id="_WWRv2-ixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="1362.0" y="412.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv3OixEeiV94kHgjpOMg" bpmnElement="Id_7ea79443-c627-416a-88c5-dd2101bbb59f">
+        <dc:Bounds height="83.0" width="130.0" x="1163.0" y="348.0"/>
+        <bpmndi:BPMNLabel id="_WWRv3eixEeiV94kHgjpOMg"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv3uixEeiV94kHgjpOMg" bpmnElement="_aNKEX_VdEeeL5uCiN2F57w">
+        <dc:Bounds height="35.0" width="35.0" x="1059.0" y="373.0"/>
+        <bpmndi:BPMNLabel id="_WWRv3-ixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="1043.0" y="412.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv4OixEeiV94kHgjpOMg" bpmnElement="Id_1009727a-8d6f-4969-8a8e-5da26d5d4f35">
+        <dc:Bounds height="35.0" width="35.0" x="1378.0" y="209.0"/>
+        <bpmndi:BPMNLabel id="_WWRv4eixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="1362.0" y="248.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv4uixEeiV94kHgjpOMg" bpmnElement="Id_d1187594-b14c-472d-a7a6-a00fdc2448a7">
+        <dc:Bounds height="35.0" width="35.0" x="946.0" y="153.0"/>
+        <bpmndi:BPMNLabel id="_WWRv4-ixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="930.0" y="114.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv5OixEeiV94kHgjpOMg" bpmnElement="Id_3dd8a080-a200-4e18-841f-aabca3f56de4">
+        <dc:Bounds height="35.0" width="35.0" x="106.0" y="154.0"/>
+        <bpmndi:BPMNLabel id="_WWRv5eixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="90.0" y="193.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv5uixEeiV94kHgjpOMg" bpmnElement="Id_05854bb4-bec0-4f7f-879c-fec67985b8e9">
+        <dc:Bounds height="35.0" width="35.0" x="1046.0" y="208.0"/>
+        <bpmndi:BPMNLabel id="_WWRv5-ixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="1030.0" y="247.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv6OixEeiV94kHgjpOMg" bpmnElement="Id_81857804-d9f0-463c-8f1f-ac25c59ef7a3">
+        <dc:Bounds height="83.0" width="130.0" x="343.0" y="270.0"/>
+        <bpmndi:BPMNLabel id="_WWRv6eixEeiV94kHgjpOMg"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv6uixEeiV94kHgjpOMg" bpmnElement="Id_a53b1054-d508-4edb-abdf-9127369b7dc8">
+        <dc:Bounds height="40.0" width="40.0" x="388.0" y="151.0"/>
+        <bpmndi:BPMNLabel id="_WWRv6-ixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="68.0" x="374.0" y="123.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv7OixEeiV94kHgjpOMg" bpmnElement="Id_60d6d681-8792-47c8-884b-224fbb513623">
+        <dc:Bounds height="83.0" width="130.0" x="763.0" y="269.0"/>
+        <bpmndi:BPMNLabel id="_WWRv7eixEeiV94kHgjpOMg"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_WWRv7uixEeiV94kHgjpOMg" bpmnElement="Id_a96159d1-19fb-46f3-9d4f-f86e26b4d7b9">
+        <dc:Bounds height="83.0" width="130.0" x="1163.0" y="185.0"/>
+        <bpmndi:BPMNLabel id="_WWRv7-ixEeiV94kHgjpOMg"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_WWRv8OixEeiV94kHgjpOMg" bpmnElement="Id_3a741eb5-e38e-4c56-9f37-00a075899dfd">
+        <di:waypoint x="410.0" y="191.0"/>
+        <di:waypoint x="410.0" y="270.0"/>
+        <bpmndi:BPMNLabel id="_WWRv8eixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="38.0" x="416.0" y="226.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv8uixEeiV94kHgjpOMg" bpmnElement="Id_749e3350-d04f-463c-87a8-a5d71b4eb617">
+        <di:waypoint x="738.0" y="170.0"/>
+        <di:waypoint x="808.0" y="170.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv8-ixEeiV94kHgjpOMg" bpmnElement="Id_4f4bb117-88d8-42ca-8d1f-02dbb26b62dd">
+        <di:waypoint x="473.0" y="311.0"/>
+        <di:waypoint x="530.0" y="311.0"/>
+        <di:waypoint x="530.0" y="191.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv9OixEeiV94kHgjpOMg" bpmnElement="Id_27ab4a27-c596-4648-9a81-0f8563e404aa">
+        <di:waypoint x="830.0" y="191.0"/>
+        <di:waypoint x="830.0" y="269.0"/>
+        <bpmndi:BPMNLabel id="_WWRv9eixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="38.0" x="836.0" y="254.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv9uixEeiV94kHgjpOMg" bpmnElement="_aNKEYPVdEeeL5uCiN2F57w">
+        <di:waypoint x="982.0" y="330.0"/>
+        <di:waypoint x="982.0" y="394.0"/>
+        <di:waypoint x="1059.0" y="394.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv9-ixEeiV94kHgjpOMg" bpmnElement="Id_31d61cef-78a4-4406-b773-fab99c10631a">
+        <di:waypoint x="1081.0" y="225.0"/>
+        <di:waypoint x="1163.0" y="225.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv-OixEeiV94kHgjpOMg" bpmnElement="Id_c5328381-b461-44e3-abcd-8f29c9864785">
+        <di:waypoint x="990.0" y="290.0"/>
+        <di:waypoint x="990.0" y="225.0"/>
+        <di:waypoint x="1046.0" y="225.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv-eixEeiV94kHgjpOMg" bpmnElement="Id_4d07575c-8e3d-47cc-9cf4-c9b74639cd62">
+        <di:waypoint x="428.0" y="170.0"/>
+        <di:waypoint x="508.0" y="170.0"/>
+        <bpmndi:BPMNLabel id="_WWRv-uixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="38.0" x="434.0" y="173.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv--ixEeiV94kHgjpOMg" bpmnElement="Id_fa6bf371-6253-4e58-949e-c9262df9b2fd">
+        <di:waypoint x="1293.0" y="225.0"/>
+        <di:waypoint x="1378.0" y="225.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv_OixEeiV94kHgjpOMg" bpmnElement="_aNKEQvVdEeeL5uCiN2F57w">
+        <di:waypoint x="1094.0" y="390.0"/>
+        <di:waypoint x="1163.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv_eixEeiV94kHgjpOMg" bpmnElement="Id_c4380336-0061-4181-8571-4e2ac3da8414">
+        <di:waypoint x="893.0" y="309.0"/>
+        <di:waypoint x="968.0" y="309.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRv_uixEeiV94kHgjpOMg" bpmnElement="Id_c988eb2b-de58-4bbc-8ca3-9403a42b8e2a">
+        <di:waypoint x="848.0" y="170.0"/>
+        <di:waypoint x="946.0" y="170.0"/>
+        <bpmndi:BPMNLabel id="_WWRv_-ixEeiV94kHgjpOMg">
+          <dc:Bounds height="5.0" width="38.0" x="903.0" y="194.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRwAOixEeiV94kHgjpOMg" bpmnElement="Id_7bee3488-031a-4caa-be1c-85b394d1b526">
+        <di:waypoint x="1293.0" y="390.0"/>
+        <di:waypoint x="1378.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRwAeixEeiV94kHgjpOMg" bpmnElement="Id_c1be2118-8bb0-4ae9-b880-14987e901bc6">
+        <di:waypoint x="141.0" y="171.0"/>
+        <di:waypoint x="168.0" y="171.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRwAuixEeiV94kHgjpOMg" bpmnElement="Id_a9fa84cb-db25-442d-b604-0e6da13a8505">
+        <di:waypoint x="298.0" y="170.0"/>
+        <di:waypoint x="388.0" y="170.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_WWRwA-ixEeiV94kHgjpOMg" bpmnElement="Id_749bc35e-ea25-45ac-a3f9-189abd6043d7">
+        <di:waypoint x="548.0" y="170.0"/>
+        <di:waypoint x="608.0" y="170.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>

@@ -1,0 +1,15 @@
+body {
+    paddding-bottom: 70px;
+    margin: 20px 20px 0 20px;
+    height: 100%;
+}
+
+#chat {
+    height: 90vh;
+    overflow: scroll;
+}
+
+#chat-body {
+    position: absolute;
+    bottom: 0;
+}

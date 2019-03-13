@@ -1,0 +1,8 @@
+﻿  Source.cpp
+c:\users\pichp\desktop\iut\dut2\tp algo\tp3\tp3\fileattente.h(10): warning C4091: 'typedef ' : ignoré à gauche de 'Personne' quand aucune variable n'est déclarée
+c:\users\pichp\desktop\iut\dut2\tp algo\tp3\tp3\fileattente.h(15): warning C4091: 'typedef ' : ignoré à gauche de 'Maillon' quand aucune variable n'est déclarée
+c:\users\pichp\desktop\iut\dut2\tp algo\tp3\tp3\fileattente.h(20): warning C4091: 'typedef ' : ignoré à gauche de 'FileAttente' quand aucune variable n'est déclarée
+c:\users\pichp\desktop\iut\dut2\tp algo\tp3\tp3\pile.h(11): warning C4091: 'typedef ' : ignoré à gauche de 'MaillonPile' quand aucune variable n'est déclarée
+c:\users\pichp\desktop\iut\dut2\tp algo\tp3\tp3\pile.h(15): warning C4091: 'typedef ' : ignoré à gauche de 'Pile' quand aucune variable n'est déclarée
+c:\users\pichp\desktop\iut\dut2\tp algo\tp3\tp3\source.cpp(267): warning C4326: le type de retour de 'main' doit être 'int' au lieu de 'void'
+  TP3.vcxproj -> C:\Users\PICHP\Desktop\IUT\DUT2\TP ALGO\TP3\x64\Debug\TP3.exe

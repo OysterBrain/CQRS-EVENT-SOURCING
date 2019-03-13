@@ -1,0 +1,6 @@
+﻿  Source.cpp
+d:\dut\algo\tp algo\tp3\tp3\fileattente.h(10): warning C4091: 'typedef ' : ignoré à gauche de 'Personne' quand aucune variable n'est déclarée
+d:\dut\algo\tp algo\tp3\tp3\fileattente.h(15): warning C4091: 'typedef ' : ignoré à gauche de 'Maillon' quand aucune variable n'est déclarée
+d:\dut\algo\tp algo\tp3\tp3\fileattente.h(20): warning C4091: 'typedef ' : ignoré à gauche de 'FileAttente' quand aucune variable n'est déclarée
+d:\dut\algo\tp algo\tp3\tp3\source.cpp(9): warning C4326: le type de retour de 'main' doit être 'int' au lieu de 'void'
+  TP3.vcxproj -> D:\DUT\Algo\TP Algo\TP3\Debug\TP3.exe

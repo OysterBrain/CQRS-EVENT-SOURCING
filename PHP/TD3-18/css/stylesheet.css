@@ -1,0 +1,88 @@
+body {
+	background-color: #CDCDCD;
+	color: black;
+	font-family: "Segoe UI", Verdana, serif;
+	font-size:10.00pt;
+}
+#menu{
+	float : left;
+	border: solid black 1px;
+	width: 20%;	
+}
+#menuInt{
+	margin-top: 2px;
+	margin-left: 15px;	
+}
+
+#texte{
+	float:left ;
+	width: 79%;
+	margin-left: 5px;
+	border: solid black 1px;
+	
+}
+#corps{
+	margin-top: 5px;
+	float:left ;
+	width: 100%;
+}
+
+#footer{
+	border: solid black 1px;
+	width: 100%;
+	text-align: center;
+	margin-top: 5px;	
+}
+
+#libelle{
+	font-size:x-large; 
+	font-weight: bold;	
+	text-align: center;
+}
+
+
+#titre{
+	border: solid black 1px;
+	height : 60px;
+	width: 100%;
+}
+
+#spacer 
+{     
+  clear: both; 
+} 
+.centreImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+table
+{
+	border-collapse:collapse;
+	margin:auto; 
+	width:500px;
+}
+form
+{
+	border-collapse:collapse;
+	margin:auto; 
+	width:500px;
+}
+table td
+{
+	border:1px solid #333333;
+	padding:5px;
+	text-align:center;
+}
+h2, h4
+{
+	text-align:center;
+}
+.tablebordered  td
+{
+	border : 1px solid black;
+}
+
+.nobordered td
+{
+	border : 0;
+}
